@@ -1,4 +1,4 @@
-package org.sfaci.holamongodb.util;
+package org.sfaci.practica14.util;
 
 import javax.swing.*;
 import java.text.DateFormat;
@@ -7,12 +7,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-/**
- * Clase de utilidades
- *
- * @author Santiago Faci
- * @version curso 2015-2016
- */
 public class Util {
 
     public static int mensajeConfirmacion(String mensaje, String titulo) {

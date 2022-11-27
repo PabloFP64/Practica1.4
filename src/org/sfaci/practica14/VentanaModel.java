@@ -1,21 +1,15 @@
-package org.sfaci.holamongodb;
+package org.sfaci.practica14;
 
 import com.mongodb.BasicDBObject;
-import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.model.Filters;
-import com.mongodb.util.JSON;
 import org.bson.Document;
-import org.bson.conversions.Bson;
-import org.sfaci.holamongodb.base.Libro;
-import org.sfaci.holamongodb.util.Constantes;
-import org.sfaci.holamongodb.util.Util;
+import org.sfaci.practica14.base.Libro;
+import org.sfaci.practica14.util.Constantes;
+import org.sfaci.practica14.util.Util;
 
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class VentanaModel {

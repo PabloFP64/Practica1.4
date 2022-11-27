@@ -1,9 +1,8 @@
-package org.sfaci.holamongodb;
+package org.sfaci.practica14;
 
-import com.mongodb.MongoClient;
 import com.mongodb.client.MongoDatabase;
-import org.sfaci.holamongodb.base.Libro;
-import org.sfaci.holamongodb.util.Util;
+import org.sfaci.practica14.base.Libro;
+import org.sfaci.practica14.util.Util;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -11,12 +10,6 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Controlador para la Ventana
- *
- * @author Santiago Faci
- * @version curso 2015-2016
- */
 public class VentanaController implements ActionListener, MouseListener, KeyListener,
     FocusListener {
 
@@ -40,9 +33,6 @@ public class VentanaController implements ActionListener, MouseListener, KeyList
         inicializar();
     }
 
-    /**
-     * Añade Listeners y modelos a los controles de la ventana
-     */
     private void addListeners() {
 
         view.btNuevo.addActionListener(this);
@@ -59,18 +49,12 @@ public class VentanaController implements ActionListener, MouseListener, KeyList
         view.lLibros.setModel(dlmLibros);
     }
 
-    /**
-     * Operaciones de inicialización de la aplicación
-     */
     private void inicializar() {
 
         listar();
         modoEdicion(false);
     }
 
-    /**
-     * Lista todos los libros en la lista de la derecha
-     */
     private void listar() {
         try {
             List<Libro> libros = model.getLibros();
@@ -137,10 +121,7 @@ public class VentanaController implements ActionListener, MouseListener, KeyList
         }
     }
 
-    /**
-     * Activa/desactiva el modo edición
-     * @param edicion
-     */
+
     private void modoEdicion(boolean edicion) {
         view.tfTitulo.setEditable(edicion);
         view.tfDescripcion.setEditable(edicion);
@@ -154,9 +135,6 @@ public class VentanaController implements ActionListener, MouseListener, KeyList
         view.btNuevo.setEnabled(!edicion);
     }
 
-    /**
-     * Carga en pantalla el libro seleccionado en la lista de libros
-     */
     private void cargar() {
         view.tfTitulo.setText(libroSeleccionado.getTitulo());
         view.tfDescripcion.setText(libroSeleccionado.getDescripcion());

@@ -1,16 +1,10 @@
-package org.sfaci.holamongodb.base;
+package org.sfaci.practica14.base;
 
 import org.bson.types.ObjectId;
-import org.sfaci.holamongodb.util.Util;
+import org.sfaci.practica14.util.Util;
 
 import java.util.Date;
 
-/**
- * Un libro
- *
- * @author Santiago Faci
- * @version curso 2015-2016
- */
 public class Libro {
 
     public static String COLECCION = "libros";
